@@ -13,6 +13,11 @@
             android:id="@+id/nav_exemploProvider"
             android:icon="@drawable/baseline_my_location_black_24dp"
             android:title="Minha localização exata" />
+
+        <item
+            android:id="@+id/nav_exemplo2"
+            android:icon="@drawable/round_add_location_black_18dp"
+            android:title="Atualizando posição" />
     </group>
 
 

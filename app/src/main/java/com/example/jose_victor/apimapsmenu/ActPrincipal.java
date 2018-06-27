@@ -105,6 +105,12 @@ public class ActPrincipal extends AppCompatActivity
                 showFragment(new ExemploProviderFragmentV1(), "ExemploProviderFragmentV1");
 
                 break;
+
+            case R.id.nav_exemplo2:
+
+                showFragment(new ExemploProviderFragmentV2GPS(), "ExemploProviderFragmentV2GPS");
+
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
