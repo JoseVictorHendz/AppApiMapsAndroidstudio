@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_exemplo"
             android:icon="@drawable/baseline_location_on_black_24dp"
-            android:title="Localização do marcador" />
+            android:title="Localização da Ulbra " />
 
         <item
             android:id="@+id/nav_exemploProvider"
