@@ -3,6 +3,7 @@ package com.example.jose_victor.apimapsmenu;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
@@ -78,16 +79,33 @@ public class ActPrincipal extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    private void showFragment(Fragment fragment, String name) {
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        transaction.replace(R.id.container, fragment, name);
+
+        transaction.commit();
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_exemplo) {
-            // Handle the camera action
-        }
+        switch (id) {
+            case R.id.nav_exemplo:
 
+                showFragment(new MapsFragment(), "MapsFragment");
+
+                break;
+
+            case R.id.nav_exemploProvider:
+
+                showFragment(new ExemploProviderFragmentV1(), "ExemploProviderFragmentV1");
+
+                break;
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
